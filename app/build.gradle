@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'ritaj.d.crocheterapp'
-    compileSdk {33
+    compileSdk {
         version = release(37)
     }
 
@@ -13,7 +13,9 @@ android {
         minSdk 26
         targetSdk 37
         versionCode 1
-        versionName "1.0"
+
+        versionName "1.0 j.;l"
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
