@@ -20,9 +20,9 @@ public class MyTask {
     public long time;
     /* هل تمت المهمة **/
     public boolean isCompleted;
-    public long subjld;
+    public long subjId;
 
-    public long userld;
+    public long userId;
 
     @Override
     public String toString() {
@@ -33,29 +33,30 @@ public class MyTask {
                 ", text='" + text + '\'' +
                 ", time=" + time +
                 ", isCompleted=" + isCompleted +
-                ", subjld=" + subjld +
-                ", userld=" + userld +
+                ", subjld=" + subjId +
+                ", userld=" + userId +
                 '}';
     }
 
     public long getUserld() {
-        return userld;
+        return userId;
     }
 
     public void setUserld(long userld) {
-        this.userld = userld;
+        this.userId = userld;
     }
 
     public long getSubjld() {
-        return subjld;
+        return subjId;
     }
 
     public void setSubjld(long subjld) {
-        this.subjld = subjld;
+        this.subjId = subjld;
     }
 
     public boolean isCompleted() {
         return isCompleted;
+
     }
 
     public void setCompleted(boolean completed) {
@@ -70,9 +71,6 @@ public class MyTask {
         this.time = time;
     }
 
-    public long subjld;
-
-    public long userld;
 
     public String getText() {
         return text;
