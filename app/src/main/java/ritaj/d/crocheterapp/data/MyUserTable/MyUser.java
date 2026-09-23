@@ -4,15 +4,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-public class MyUser {
-    //Entity = Table =جدول
-//عندما نريد ان نتعامل مع هذه الفئة كجدول معطيات
-    /**
-     * فئة تمثل المستعمل
-     */
-    @Entity
-    public class MyUser
-    {
+@Entity
+public class MyUser
+{
+
         @PrimaryKey(autoGenerate = true)//تحديد الصفة كمفتاح رئيسي والذي يُنتجح بشكل تلقائي
         public long keyid;
         @ColumnInfo(name = "full_Name")//اعطاء اسم جديد للعامود-الصفة في الجدول
