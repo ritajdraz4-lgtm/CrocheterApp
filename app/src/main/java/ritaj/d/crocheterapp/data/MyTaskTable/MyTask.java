@@ -8,7 +8,7 @@ public class MyTask {
 
     @PrimaryKey(autoGenerate = true)
     /* رقم المهمة **/
-    public long keyld;
+    public long keyId;
     /* درجة الاهمية 1-5 **/
     public int importance;
     /* عنوان قصير **/
@@ -27,7 +27,7 @@ public class MyTask {
     @Override
     public String toString() {
         return "MyTask{" +
-                "keyld=" + keyld +
+                "keyld=" + keyId +
                 ", importance=" + importance +
                 ", shortTitle='" + shortTitle + '\'' +
                 ", text='" + text + '\'' +
@@ -97,10 +97,10 @@ public class MyTask {
     }
 
     public long getKeyld() {
-        return keyld;
+        return keyId;
     }
 
     public void setKeyld(long keyld) {
-        this.keyld = keyld;
+        this.keyId = keyld;
     }
 }
