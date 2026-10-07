@@ -1,4 +1,4 @@
-package ritaj.d.crocheterapp;
+package ritaj.d.crocheterapp.viewPkg;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import ritaj.d.crocheterapp.R;
 import ritaj.d.crocheterapp.data.AppDataBase;
 import ritaj.d.crocheterapp.data.mySubjectTable.MySubject;
 import ritaj.d.crocheterapp.data.mySubjectTable.MySubjectQuery;
