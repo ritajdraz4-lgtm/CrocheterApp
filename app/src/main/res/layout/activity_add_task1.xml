@@ -5,44 +5,55 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     app:layoutDescription="@xml/activity_add_task1_scene"
     tools:context=".viewPkg.AddTaskActivity1">
 
-    <Button
-        android:id="@+id/btnSaveTask"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="---------------------------------------------------------------------------" />
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        />
+        android:layout_height="81dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Add New Task"
+        android:textSize="34sp" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:ems="10"
+        android:hint="Task Title"
         android:inputType="text"
-        android:text="Name" />
+        android:textColor="#715858" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine" />
+        android:hint="Task Description"
+        android:inputType="textMultiLine"
+        android:textColor="#FFF7F7" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/etPriority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:ems="10"
         android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnSaveTask"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Save Task" />
 
 </LinearLayout>
