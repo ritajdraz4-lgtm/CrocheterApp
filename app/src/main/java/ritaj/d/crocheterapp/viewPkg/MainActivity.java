@@ -9,9 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import ritaj.d.crocheterapp.R;
-import ritaj.d.crocheterapp.data.AppDataBase;
-import ritaj.d.crocheterapp.data.mySubjectTable.MySubject;
-import ritaj.d.crocheterapp.data.mySubjectTable.MySubjectQuery;
+import ritaj.d.crocheterapp.model.AppDataBase;
+import ritaj.d.crocheterapp.model.mySubjectTable.MySubject;
+import ritaj.d.crocheterapp.model.mySubjectTable.MySubjectQuery;
 
 public class MainActivity extends AppCompatActivity {
 

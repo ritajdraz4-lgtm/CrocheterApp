@@ -1,4 +1,4 @@
-package ritaj.d.crocheterapp.data.mySubjectTable;
+package ritaj.d.crocheterapp.model.mySubjectTable;
 
 
 import androidx.room.Dao;

@@ -1,4 +1,4 @@
-package ritaj.d.crocheterapp.data;
+package ritaj.d.crocheterapp.model;
 
 import android.content.Context;
 
@@ -6,12 +6,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import ritaj.d.crocheterapp.data.MyTaskTable.MyTask;
-import ritaj.d.crocheterapp.data.MyTaskTable.MyTaskQuery;
-import ritaj.d.crocheterapp.data.MyUserTable.MyUser;
-import ritaj.d.crocheterapp.data.MyUserTable.MyUserQuery;
-import ritaj.d.crocheterapp.data.mySubjectTable.MySubject;
-import ritaj.d.crocheterapp.data.mySubjectTable.MySubjectQuery;
+import ritaj.d.crocheterapp.model.MyTaskTable.MyTask;
+import ritaj.d.crocheterapp.model.MyTaskTable.MyTaskQuery;
+import ritaj.d.crocheterapp.model.MyUserTable.MyUser;
+import ritaj.d.crocheterapp.model.MyUserTable.MyUserQuery;
+import ritaj.d.crocheterapp.model.mySubjectTable.MySubject;
+import ritaj.d.crocheterapp.model.mySubjectTable.MySubjectQuery;
 
 
 @Database (entities ={MyUser.class,MySubject.class, MyTask.class},version=1)

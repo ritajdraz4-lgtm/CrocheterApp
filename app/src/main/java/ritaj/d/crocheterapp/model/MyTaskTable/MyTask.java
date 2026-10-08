@@ -1,4 +1,4 @@
-package ritaj.d.crocheterapp.data.MyTaskTable;
+package ritaj.d.crocheterapp.model.MyTaskTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

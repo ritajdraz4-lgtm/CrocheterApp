@@ -1,4 +1,4 @@
-package ritaj.d.crocheterapp.data.MyUserTable;
+package ritaj.d.crocheterapp.model.MyUserTable;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
