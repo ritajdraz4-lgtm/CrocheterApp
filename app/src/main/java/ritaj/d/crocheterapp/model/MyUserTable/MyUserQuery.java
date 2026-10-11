@@ -1,5 +1,6 @@
 package ritaj.d.crocheterapp.model.MyUserTable;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -10,7 +11,9 @@ import java.util.List;
 
 @Dao
 
-public interface MyUserQuery { //استخراج جميع المستعملين
+public interface MyUserQuery {
+    static LiveData<List<MyUser>> getAllUsers() {
+    } //استخراج جميع المستعملين
     @Query("SELECT * FROM MyUser")
     List<MyUser> getAll();
     // استخراج مستعمل حسب رقم المميز لهid
@@ -35,6 +38,16 @@ public interface MyUserQuery { //استخراج جميع المستعملين
     void insert(MyUser myUser);
     @Update//تعديل مستعمل او قائمة مستعملين
     void update(MyUser...values);
+
+    LiveData<List<MyUser>> getUsersByUserId(long userId);
+
+    LiveData<List<MyUser>> getUsersByKeyId(long keyId);
+
+    LiveData<MyUser> getUsersByfullName(String fullName);
+
+    LiveData<List<MyUser>> getUsersByemail(String email);
+
+    LiveData<List<MyUser>> getUsersByphone(String phone);
 }
 
 
