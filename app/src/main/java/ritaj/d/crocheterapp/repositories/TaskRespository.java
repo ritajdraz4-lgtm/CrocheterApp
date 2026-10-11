@@ -17,7 +17,7 @@ import ritaj.d.crocheterapp.model.MyTaskTable.MyTaskQuery;
 
 public class TaskRespository {
     private  MyTaskQuery taskQuery;//واجهة الاستعلامات
-    private  LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهلام المستخرجة
+    private  LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهام المستخرجة
 
 
     /**
@@ -122,7 +122,7 @@ public class TaskRespository {
     /**
      * تحديث مهمة أو عدة مهمات في قاعدة البيانات.
      *
-     * @param tasks المهام المراد تحديثها.
+     * @param tasks المهام المراد تعديلها.
      */
     public void update(MyTask... tasks) {
         taskQuery.update(tasks);
@@ -131,14 +131,12 @@ public class TaskRespository {
 
     /**
      * تحديث بيانات مهمة محددة (العنوان، الوصف، والأولوية) باستخدام معرف المهمة.
-     *
-     * @param taskId      معرف المهمة المراد تعديلها.
-     * @param title       العنوان الجديد.
-     * @param description الوصف الجديد.
-     * @param priority    الأولوية الجديدة.
+     * @param myTask المهمة التي نريد تحديثها
      */
-    public void updateTask(long taskId, String title, String description, int priority) {
-        taskQuery.updateTask(taskId, title, description, priority);
+    public void updateTask(MyTask myTask)
+    {
+
+        taskQuery.updateTask(myTask);
     }
 
 
