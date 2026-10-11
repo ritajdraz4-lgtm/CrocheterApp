@@ -48,6 +48,8 @@ public interface MyUserQuery {
     LiveData<List<MyUser>> getUsersByemail(String email);
 
     LiveData<List<MyUser>> getUsersByphone(String phone);
+
+    LiveData<List<MyUser>> getUserBypassw(String passw);
 }
 
 

@@ -82,18 +82,35 @@ public class UserRespository {
     /**
      * جلب المهام المفلترة حسب مستوى الأولوية.
      *
-     * @param priority مستوى الأولوية المطلوب.
+     * @param passw مستوى الأولوية المطلوب.
      * @return قائمة المهام ذات الأولوية المحددة.
      */
-    public LiveData<List<MyUser>> getTasksByPriority(int priority) {
-        return userQuery.getTasksByPriority(priority);
+    public LiveData<List<MyUser>> getTasksByPriority(String passw) {
+        return userQuery.getUserBypassw(passw);
     }
+}
+
+/**
+ * تحديث بيانات مهمة محددة (العنوان، الوصف، والأولوية) باستخدام معرف المهمة.
+ *
+ * @param
+public void updateUser(MyUser myUser) {
+    userQuery.updateTask(myUser);
+}
+
+
+
+
 
 
 /**
  * جلب المهام الخاصة بمستخدم معين والتي تتطابق مع عنوان معين.
+public void updateTask(MyTask myTask)
+{
+
+taskQuery.updateTask(myTask);
+}
 
 
 
 
- }
