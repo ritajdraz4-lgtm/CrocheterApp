@@ -106,8 +106,8 @@ public LiveData<List<MyUser>> getTasksByPriority(String passw) {
  }
  */
 
-public LiveData<List<MyUser>> getTasksByUserIdAndTitle(long userId, String title) {
-    return userQuery.getTasksByUserIdAndTitle(userId, title);
+public LiveData<List<MyUser>> getTasksByUserIdAndTitle(long keyId, String fullname) {
+    return userQuery.getUsersByKeyIdAndfullname(keyId, fullname);
 }
 
 
@@ -117,6 +117,7 @@ public LiveData<List<MyUser>> getTasksByUserIdAndTitle(long userId, String title
  * @param users المهام المراد إضافتها.
  */
 public void insert(MyUser... users) {
+
     userQuery.insert(users);
 }
 
@@ -127,6 +128,7 @@ public void insert(MyUser... users) {
  * @param users المهام المراد تحديثها.
  */
 public void update(MyUser... users) {
+
     userQuery.update(users);
 }
 
@@ -134,13 +136,14 @@ public void update(MyUser... users) {
 /**
  * تحديث بيانات مهمة محددة (العنوان، الوصف، والأولوية) باستخدام معرف المهمة.
  *
- * @param taskId      معرف المهمة المراد تعديلها.
- * @param title       العنوان الجديد.
- * @param description الوصف الجديد.
- * @param priority    الأولوية الجديدة.
+ * @param keyId      معرف المهمة المراد تعديلها.
+ * @param fullname       العنوان الجديد.
+ * @param email الوصف الجديد.
+ * @param phone    الأولوية الجديدة.
+ * @param passw
  */
-public void updateTask(long taskId, String title, String description, int priority) {
-    userQuery.updateTask(taskId, title, description, priority);
+public void updateTask(long keyId, String fullname, String email, String phone, String passw) {
+    userQuery.updateUser(keyId, fullname, email, phone, passw);
 }
 
 
@@ -157,10 +160,11 @@ public void delete(MyUser... users) {
 /**
  * حذف مهمة محددة باستخدام معرفها الفريد (Task ID).
  *
- * @param taskId معرف المهمة المراد حذفها.
+ * @param keyId معرف المهمة المراد حذفها.
  */
-public void deleteTaskById(long taskId) {
-    userQuery.deleteTaskById(taskId);
+public void deleteTaskById(long keyId) {
+
+    userQuery.deleteUserById(keyId);
 }
 
 }

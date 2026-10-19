@@ -13,7 +13,9 @@ import java.util.List;
 
 public interface MyUserQuery {
     static LiveData<List<MyUser>> getAllUsers() {
-    }//استخراج جميع المستعملين
+        return null;
+    }
+    //استخراج جميع المستعملين
     @Query("SELECT * FROM MyUser")
     List<MyUser> getAll();
     // استخراج مستعمل حسب رقم المميز لهid
@@ -30,12 +32,12 @@ public interface MyUserQuery {
     void insertAll(MyUser... users);
     @Delete
 // حذف
-    void delete(MyUser user);
+    void delete(MyUser[] users);
     //حذف حسب الرقم المميز id
     @Query("Delete From MyUser WHERE keyid=:id ")
     void delete(int id);
     @Insert//اضافة مستعمل واحد
-    void insert(MyUser myUser);
+    void insert(MyUser[] myUser);
     @Update//تعديل مستعمل او قائمة مستعملين
     void update(MyUser...values);
     @Query("SELECT * FROM MyTask WHERE subjId=:userId "+" ORDER BY importance DESC")
@@ -51,6 +53,13 @@ public interface MyUserQuery {
     LiveData<List<MyUser>> getUsersByphone(String phone);
     @Query("SELECT * FROM MyTask WHERE subjId=:passw "+" ORDER BY importance DESC")
     LiveData<List<MyUser>> getUserBypassw(String passw);
+
+    void deleteUserById(long keyId);
+
+
+    void updateUser(long keyId, String fullname, String email, String phone, String passw);
+
+    LiveData<List<MyUser>> getUsersByKeyIdAndfullname(long keyId, String fullname);
 }
 
 
