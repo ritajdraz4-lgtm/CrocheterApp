@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="15dp"
     android:orientation="vertical"
     app:layoutDescription="@xml/activity_add_task1_scene"
     tools:context=".viewPkg.AddTaskActivity1">
@@ -14,7 +14,7 @@
         android:id="@+id/TextView"
         android:layout_width="match_parent"
         android:layout_height="81dp"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:text="Add New Task"
         android:textSize="34sp" />
@@ -52,7 +52,7 @@
         android:id="@+id/btnSaveTask"
         android:layout_width="350dp"
         android:layout_height="47dp"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:text="Save Task" />
 

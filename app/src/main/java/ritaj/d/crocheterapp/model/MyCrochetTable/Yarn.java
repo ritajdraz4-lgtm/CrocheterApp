@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Yarn {
-    @PrimaryKey (autoGenerate = true)
+   // @PrimaryKey (autoGenerate = true)
 
 
 }

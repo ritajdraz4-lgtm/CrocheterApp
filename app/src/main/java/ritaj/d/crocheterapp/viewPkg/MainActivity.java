@@ -1,6 +1,9 @@
 package ritaj.d.crocheterapp.viewPkg;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +17,8 @@ import ritaj.d.crocheterapp.model.mySubjectTable.MySubject;
 import ritaj.d.crocheterapp.model.mySubjectTable.MySubjectQuery;
 
 public class MainActivity extends AppCompatActivity {
+    private Button btnAddTaskScreen;
+    private Button btnRegisterScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
+        btnAddTaskScreen=findViewById(R.id.btnAddTaskScreen);
+        btnAddTaskScreen.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view){
+                Intent i=new Intent(MainActivity.this, AddTaskActivity1.class);
+                startActivity(i);
+            }
+        });
+        btnRegisterScreen=findViewById(R.id.btnRegisterScreen);
+        btnRegisterScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(i);
+            }
+        });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

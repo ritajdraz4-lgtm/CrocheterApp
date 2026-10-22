@@ -16,8 +16,9 @@ public class CrochetRepository {
         taskQuery = db.myTaskQuery();
         allTasks = taskQuery.getAllTasks();
     }
+
     /**
-     *LiveData جلب جميع المهام الموجودة في قاعدة البيانات كـ.
+     * LiveData جلب جميع المهام الموجودة في قاعدة البيانات كـ.
      *
      * @return قائمة بجميع المهام المحدثة تلقائياً.
      */
@@ -37,6 +38,6 @@ public class CrochetRepository {
     }
 
 
-/**
+
 
  }
