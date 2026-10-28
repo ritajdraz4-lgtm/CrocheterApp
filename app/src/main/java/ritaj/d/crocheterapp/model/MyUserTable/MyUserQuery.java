@@ -41,7 +41,7 @@ public interface MyUserQuery {
     @Update//تعديل مستعمل او قائمة مستعملين
     void update(MyUser...values);
     @Query("SELECT * FROM MyTask WHERE subjId=:userId "+" ORDER BY importance DESC")
-    LiveData<List<MyUser>> getUsersByUserId(long userId);
+    LiveData<List<MyUser>>  getUsersByUserId(long userId);
     @Query("SELECT * FROM MyTask WHERE subjId=:keyId "+" ORDER BY importance DESC")
 
     LiveData<List<MyUser>> getUsersByKeyId(long keyId);

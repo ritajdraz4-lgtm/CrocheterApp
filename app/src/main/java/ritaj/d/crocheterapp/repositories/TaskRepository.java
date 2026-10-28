@@ -17,7 +17,7 @@ import ritaj.d.crocheterapp.model.MyUserTable.MyUserQuery;
         * عن بقية أجزاء التطبيق (ViewModels).
         */
 
-public class TaskRespository {
+public class TaskRepository {
     private  MyTaskQuery taskQuery;//واجهة الاستعلامات
     private  LiveData<List<MyTask>> allTasks;//مبنى معطيات يحوي جميع المهام المستخرجة
 
@@ -28,7 +28,7 @@ public class TaskRespository {
      *
      * @param application سياق التطبيق (Application Context) المستخدم لإنشاء قاعدة البيانات.
      */
-    public TaskRespository(Application application) {
+    public TaskRepository(Application application) {
         AppDataBase db = AppDataBase.getDB(application);
         taskQuery = db.getMyTaskQuery();
         allTasks = (LiveData<List<MyTask>>) taskQuery.getAllTasks();
@@ -161,6 +161,9 @@ public class TaskRespository {
 
         taskQuery.deleteTaskById(taskId);
 
+    }
+
+    public void updateTask(long taskId, String title, String description, int priority) {
     }
 
     public class userRespository { private MyUserQuery userQuery;//واجهة الاستعلامات
