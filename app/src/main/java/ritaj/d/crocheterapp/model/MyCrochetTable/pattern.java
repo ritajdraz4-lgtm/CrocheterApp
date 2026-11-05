@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Pattern")
-public class Pattern {
+public class pattern {
     @PrimaryKey(autoGenerate = true)
     private int patternId;
     private String name; // اسم الباترون
@@ -20,7 +20,7 @@ public class Pattern {
     private String writtenPattern; // الباترون المكتوب
     private String chartPattern; // الباترون المرسوم (رسم بياني)
 
-    public Pattern(String name, String description, String difficultyLevel, String requiredColors,
+    public pattern(String name, String description, String difficultyLevel, String requiredColors,
                   String requiredYarnType, String requiredYarnWeight, String requiredHookSize,
                   int requiredSkeinCount, String imagePath, String topic, String writtenPattern,
                   String chartPattern) {

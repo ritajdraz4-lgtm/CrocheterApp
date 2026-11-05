@@ -21,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".viewPkg.AddTaskActivity1"
             android:exported="false"
@@ -30,9 +31,11 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".model.SignIn"
+            android:name=".viewPkg.sign_in"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+
     </application>
 
 </manifest>
