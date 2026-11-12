@@ -8,7 +8,7 @@ import java.util.List;
 
 import ritaj.d.crocheterapp.model.MyCrochetTable.Hook;
 import ritaj.d.crocheterapp.model.MyCrochetTable.HookQuery;
-import ritaj.d.crocheterapp.model.MyCrochetTable.Pattern;
+import ritaj.d.crocheterapp.model.MyCrochetTable.pattern;
 import ritaj.d.crocheterapp.model.MyCrochetTable.PatternQuery;
 import ritaj.d.crocheterapp.model.MyCrochetTable.Yarn;
 import ritaj.d.crocheterapp.model.MyCrochetTable.YarnQuery;
@@ -19,7 +19,7 @@ public class CrochetRepository {
     private PatternQuery patternQuery;
     private LiveData<List<Hook>> allHooks;
     private LiveData<List<Yarn>> allYarns;
-    private LiveData<List<Pattern>> allPatterns;
+    private LiveData<List<pattern>> allPatterns;
 
     /**
      * منشئ الكلاس (Constructor).
@@ -198,7 +198,7 @@ public class CrochetRepository {
      *
      * @return قائمة بجميع الباترونات المحدثة تلقائياً.
      */
-    public LiveData<List<Pattern>> getAllPatterns() {
+    public LiveData<List<pattern>> getAllPatterns() {
         return allPatterns;
     }
 
@@ -207,7 +207,7 @@ public class CrochetRepository {
      *
      * @param pattern الباترون المراد إضافته.
      */
-    public void insertPattern(Pattern pattern) {
+    public void insertPattern(pattern pattern) {
         new Thread(() -> {
             if (patternQuery != null) {
                 patternQuery.insertPattern(pattern);
@@ -220,7 +220,7 @@ public class CrochetRepository {
      *
      * @param pattern الباترون المراد تعديله.
      */
-    public void updatePattern(Pattern pattern) {
+    public void updatePattern(pattern pattern) {
         new Thread(() -> {
             if (patternQuery != null) {
                 patternQuery.update(pattern);
@@ -233,7 +233,7 @@ public class CrochetRepository {
      *
      * @param pattern الباترون المراد حذفه.
      */
-    public void deletePattern(Pattern pattern) {
+    public void deletePattern(pattern pattern) {
         new Thread(() -> {
             if (patternQuery != null) {
                 patternQuery.delete(pattern);
@@ -247,7 +247,7 @@ public class CrochetRepository {
      * @param topic الموضوع المطلوب.
      * @return قائمة الباترونات بالموضوع المحدد.
      */
-    public LiveData<List<Pattern>> getPatternsByTopic(String topic) {
+    public LiveData<List<pattern>> getPatternsByTopic(String topic) {
         if (patternQuery != null) {
             return patternQuery.getPatternsByTopic(topic);
         }
@@ -260,7 +260,7 @@ public class CrochetRepository {
      * @param difficultyLevel مستوى الصعوبة (مبتدئ، متوسط، متقدم).
      * @return قائمة الباترونات بمستوى الصعوبة المحدد.
      */
-    public LiveData<List<Pattern>> getPatternsByDifficulty(String difficultyLevel) {
+    public LiveData<List<pattern>> getPatternsByDifficulty(String difficultyLevel) {
         if (patternQuery != null) {
             return patternQuery.getPatternsByDifficulty(difficultyLevel);
         }
@@ -273,7 +273,7 @@ public class CrochetRepository {
      * @param searchTerm كلمة البحث.
      * @return قائمة الباترونات المطابقة.
      */
-    public LiveData<List<Pattern>> searchPatterns(String searchTerm) {
+    public LiveData<List<pattern>> searchPatterns(String searchTerm) {
         if (patternQuery != null) {
             return patternQuery.searchPatterns(searchTerm);
         }
@@ -291,7 +291,7 @@ public class CrochetRepository {
      * @param availableSkeins عدد الكباكيب المتوفرة.
      * @return قائمة الباترونات المناسبة.
      */
-    public LiveData<List<Pattern>> getPatternsBasedOnMyYarn(String yarnType, String yarnWeight, int availableSkeins) {
+    public LiveData<List<pattern>> getPatternsBasedOnMyYarn(String yarnType, String yarnWeight, int availableSkeins) {
         if (patternQuery != null) {
             return patternQuery.getPatternsBasedOnMyYarn(yarnType, yarnWeight, availableSkeins);
         }
@@ -307,7 +307,7 @@ public class CrochetRepository {
      * @param color اللون المتوفر.
      * @return قائمة الباترونات المناسبة.
      */
-    public LiveData<List<Pattern>> getPatternsBasedOnMyYarnWithColor(String yarnType, String yarnWeight, int availableSkeins, String color) {
+    public LiveData<List<pattern>> getPatternsBasedOnMyYarnWithColor(String yarnType, String yarnWeight, int availableSkeins, String color) {
         if (patternQuery != null) {
             return patternQuery.getPatternsBasedOnMyYarnWithColor(yarnType, yarnWeight, availableSkeins, color);
         }
@@ -320,7 +320,7 @@ public class CrochetRepository {
      *
      * @return قائمة الباترونات المقترحة.
      */
-    public LiveData<List<Pattern>> suggestProject() {
+    public LiveData<List<pattern>> suggestProject() {
         // هذه الدالة يمكن تطويرها لاحقاً لتكون أكثر ذكاءً
         // حالياً تعيد جميع الباترونات
         return allPatterns;

@@ -12,12 +12,9 @@ import java.util.List;
 @Dao
 
 public interface MyUserQuery {
-    static LiveData<List<MyUser>> getAllUsers() {
-        return null;
-    }
     //استخراج جميع المستعملين
     @Query("SELECT * FROM MyUser")
-    List<MyUser> getAll();
+    LiveData<List<MyUser>> getAll();
     // استخراج مستعمل حسب رقم المميز لهid
     @Query("SELECT * FROM MyUser WHERE keyid IN (:userIds)")
     List<MyUser> loadAllByIds(int[] userIds);
@@ -32,33 +29,35 @@ public interface MyUserQuery {
     void insertAll(MyUser... users);
     @Delete
 // حذف
-    void delete(MyUser[] users);
+    void delete(MyUser... users);
     //حذف حسب الرقم المميز id
-    @Query("Delete From MyUser WHERE keyid=:id ")
-    void delete(int id);
+    @Query("DELETE FROM MyUser WHERE keyid = :id")
+    void deleteById(int id);
     @Insert//اضافة مستعمل واحد
-    void insert(MyUser[] myUser);
+    void insert(MyUser myUser);
     @Update//تعديل مستعمل او قائمة مستعملين
     void update(MyUser...values);
-    @Query("SELECT * FROM MyTask WHERE subjId=:userId "+" ORDER BY importance DESC")
-    LiveData<List<MyUser>>  getUsersByUserId(long userId);
-    @Query("SELECT * FROM MyTask WHERE subjId=:keyId "+" ORDER BY importance DESC")
-
+    @Query("SELECT * FROM MyUser WHERE keyid = :userId")
+    LiveData<List<MyUser>> getUsersByUserId(long userId);
+    @Query("SELECT * FROM MyUser WHERE keyid = :keyId")
     LiveData<List<MyUser>> getUsersByKeyId(long keyId);
-    @Query("SELECT * FROM MyTask WHERE subjId=:fullName "+" ORDER BY importance DESC")
+    @Query("SELECT * FROM MyUser WHERE full_Name = :fullName")
     LiveData<MyUser> getUsersByfullName(String fullName);
-    @Query("SELECT * FROM MyTask WHERE subjId=:email "+" ORDER BY importance DESC")
+    @Query("SELECT * FROM MyUser WHERE email = :email")
     LiveData<List<MyUser>> getUsersByemail(String email);
-    @Query("SELECT * FROM MyTask WHERE subjId=:phone "+" ORDER BY importance DESC")
+    @Query("SELECT * FROM MyUser WHERE phone = :phone")
     LiveData<List<MyUser>> getUsersByphone(String phone);
-    @Query("SELECT * FROM MyTask WHERE subjId=:passw "+" ORDER BY importance DESC")
+    @Query("SELECT * FROM MyUser WHERE passw = :passw")
     LiveData<List<MyUser>> getUserBypassw(String passw);
 
+    @Query("DELETE FROM MyUser WHERE keyid = :keyId")
     void deleteUserById(long keyId);
 
 
+    @Query("UPDATE MyUser SET full_Name = :fullname, email = :email, phone = :phone, passw = :passw WHERE keyid = :keyId")
     void updateUser(long keyId, String fullname, String email, String phone, String passw);
 
+    @Query("SELECT * FROM MyUser WHERE keyid = :keyId AND full_Name = :fullname")
     LiveData<List<MyUser>> getUsersByKeyIdAndfullname(long keyId, String fullname);
 }
 

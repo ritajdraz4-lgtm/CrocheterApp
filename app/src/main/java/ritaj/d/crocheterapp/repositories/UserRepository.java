@@ -26,7 +26,7 @@ public class UserRepository{
 public UserRepository(Application application) {
     AppDataBase db = AppDataBase.getDB(application);
     userQuery = db.getMyUserQuery();
-    allUsers = MyUserQuery.getAllUsers();
+    allUsers = userQuery.getAll();
 }
 /**
  *LiveData جلب جميع المهام الموجودة في قاعدة البيانات كـ.
@@ -118,7 +118,7 @@ public LiveData<List<MyUser>> getTasksByUserIdAndTitle(long keyId, String fullna
  */
 public void insert(MyUser... users) {
 
-    userQuery.insert(users);
+    userQuery.insertAll(users);
 }
 
 
