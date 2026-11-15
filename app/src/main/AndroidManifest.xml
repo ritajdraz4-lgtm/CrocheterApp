@@ -20,8 +20,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <activity
+                android:name=".SplashActivity"
+                android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
         </activity>
-
         <activity
             android:name=".viewPkg.AddTaskActivity1"
             android:exported="false"
@@ -34,8 +41,14 @@
             android:name=".viewPkg.sign_in"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
-
+        <activity
+            android:name=".repositories.splash"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".viewPkg.splash"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
