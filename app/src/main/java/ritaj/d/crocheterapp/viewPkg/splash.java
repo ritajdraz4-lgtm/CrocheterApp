@@ -8,7 +8,9 @@ import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashActivity extends AppCompatActivity {
+import ritaj.d.crocheterapp.R;
+
+public class splash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,8 @@ public class SplashActivity extends AppCompatActivity {
 
         // Delay for 2.5 seconds (2500ms) then open LoginActivity
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Intent intent = new Intent(SplashActivity.this, sign_in.class);
+            Intent intent = new Intent(splash.this, sign_in.class);
             startActivity(intent);
             finish(); // Prevents going back to Splash Screen when pressing Back
         }, 2500);
-    }
-}
+    }}

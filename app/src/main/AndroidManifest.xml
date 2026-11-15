@@ -7,48 +7,45 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="CrocheterApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CrocheterApp">
+
+        <!-- 1. شاشة البداية (تفتح أولاً) -->
         <activity
-            android:name=".viewPkg.MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".viewPkg.splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <activity
-                android:name=".SplashActivity"
-                android:exported="true">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
         </activity>
+
+        <!-- 2. الشاشة الرئيسية -->
         <activity
-            android:name=".viewPkg.AddTaskActivity1"
+            android:name=".viewPkg.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".viewPkg.RegisterActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 3. شاشة تسجيل الدخول -->
         <activity
             android:name=".viewPkg.sign_in"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- 4. شاشة إنشاء الحساب -->
         <activity
-            android:name=".repositories.splash"
+            android:name=".viewPkg.RegisterActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- 5. شاشة إضافة مهمة -->
         <activity
-            android:name=".viewPkg.splash"
+            android:name=".viewPkg.AddTaskActivity1"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

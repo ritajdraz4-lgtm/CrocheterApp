@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F8F9FA">
+    android:background="#F7EAE0">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,14 +13,22 @@
         android:padding="28dp"
         android:gravity="center_horizontal">
 
+        <!-- App Logo (Blends seamlessly with #F7EAE0 background) -->
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Crocheter's Place Logo"
+            android:src="@drawable/logoic" />
+
         <!-- App Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="sans-serif-medium"
             android:text="Crocheter's Place"
-            android:textColor="#2B2D42"
+            android:textColor="#4A2C2A"
             android:textSize="28sp"
             android:textStyle="bold" />
 
@@ -30,8 +38,8 @@
             android:layout_height="wrap_content"
             android:text="Welcome back! Ready to craft?"
             android:textSize="14sp"
-            android:textColor="#8D99AE"
-            android:layout_marginBottom="32dp"
+            android:textColor="#7D5A50"
+            android:layout_marginBottom="28dp"
             android:layout_marginTop="6dp" />
 
         <!-- Email Field -->
@@ -41,18 +49,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Email Address"
+            app:hintTextColor="#4A2C2A"
+            app:boxBackgroundColor="#FFFFFF"
             app:boxCornerRadiusTopStart="14dp"
             app:boxCornerRadiusTopEnd="14dp"
             app:boxCornerRadiusBottomStart="14dp"
             app:boxCornerRadiusBottomEnd="14dp"
-            app:boxStrokeColor="#6B4E71">
+            app:boxStrokeColor="#4A2C2A">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="#2B2D42" />
+                android:textColor="#4A2C2A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password Field -->
@@ -62,19 +72,22 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:hint="Password"
+            app:hintTextColor="#4A2C2A"
+            app:boxBackgroundColor="#FFFFFF"
             app:endIconMode="password_toggle"
+            app:endIconTint="#7D5A50"
             app:boxCornerRadiusTopStart="14dp"
             app:boxCornerRadiusTopEnd="14dp"
             app:boxCornerRadiusBottomStart="14dp"
             app:boxCornerRadiusBottomEnd="14dp"
-            app:boxStrokeColor="#6B4E71">
+            app:boxStrokeColor="#4A2C2A">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:textColor="#2B2D42" />
+                android:textColor="#4A2C2A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Sign In Button -->
@@ -86,7 +99,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            app:backgroundTint="#6B4E71"
+            app:backgroundTint="#4A2C2A"
             app:cornerRadius="14dp"
             android:elevation="4dp" />
 
@@ -103,13 +116,13 @@
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1"
-                android:background="#E0E0E0" />
+                android:background="#D7C3B5" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" OR "
-                android:textColor="#8D99AE"
+                android:textColor="#7D5A50"
                 android:textSize="12sp"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp" />
@@ -118,19 +131,17 @@
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1"
-                android:background="#E0E0E0" />
+                android:background="#D7C3B5" />
         </LinearLayout>
 
         <!-- Google Sign In Button -->
-
-        <!-- Register Link -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGoogle"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:elevation="2dp"
             android:text="Continue with Google"
-            android:textColor="#2B2D42"
+            android:textColor="#4A2C2A"
             android:textSize="15sp"
             android:textStyle="bold"
             app:backgroundTint="#FFFFFF"
@@ -140,15 +151,16 @@
             app:iconPadding="12dp"
             app:iconSize="20dp"
             app:iconTint="@null"
-            app:strokeColor="#E0E0E0"
+            app:strokeColor="#D7C3B5"
             app:strokeWidth="1dp" />
 
+        <!-- Register Link -->
         <TextView
             android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't have an account? Sign Up"
-            android:textColor="#6B4E71"
+            android:textColor="#D9822B"
             android:textSize="14sp"
             android:textStyle="bold"
             android:layout_marginTop="24dp"
@@ -160,9 +172,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Continue as Guest"
-            android:textColor="#8D99AE"
+            android:textColor="#7D5A50"
             android:textSize="13sp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:padding="8dp" />
 
     </LinearLayout>

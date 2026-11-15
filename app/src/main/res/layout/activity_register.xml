@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F8F9FA">
+    android:background="#F7EAE0">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,14 +13,22 @@
         android:padding="28dp"
         android:gravity="center_horizontal">
 
+        <!-- App Logo (Blends seamlessly with #F7EAE0 background) -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="Crocheter's Place Logo"
+            android:src="@drawable/logoic" />
+
         <!-- App Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="sans-serif-medium"
             android:text="Crocheter's Place"
-            android:textColor="#2B2D42"
+            android:textColor="#4A2C2A"
             android:textSize="28sp"
             android:textStyle="bold" />
 
@@ -28,11 +36,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create an account to start tracking your yarn &amp; patterns"
+            android:text="Create an account to start tracking your yarn & patterns"
             android:textSize="14sp"
-            android:textColor="#8D99AE"
+            android:textColor="#7D5A50"
             android:gravity="center"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="24dp"
             android:layout_marginTop="6dp" />
 
         <!-- Full Name Field -->
@@ -42,18 +50,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Full Name"
+            app:hintTextColor="#4A2C2A"
+            app:boxBackgroundColor="#FFFFFF"
             app:boxCornerRadiusTopStart="14dp"
             app:boxCornerRadiusTopEnd="14dp"
             app:boxCornerRadiusBottomStart="14dp"
             app:boxCornerRadiusBottomEnd="14dp"
-            app:boxStrokeColor="#6B4E71">
+            app:boxStrokeColor="#4A2C2A">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:textColor="#2B2D42" />
+                android:textColor="#4A2C2A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Email Field -->
@@ -63,18 +73,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Email Address"
+            app:hintTextColor="#4A2C2A"
+            app:boxBackgroundColor="#FFFFFF"
             app:boxCornerRadiusTopStart="14dp"
             app:boxCornerRadiusTopEnd="14dp"
             app:boxCornerRadiusBottomStart="14dp"
             app:boxCornerRadiusBottomEnd="14dp"
-            app:boxStrokeColor="#6B4E71">
+            app:boxStrokeColor="#4A2C2A">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="#2B2D42" />
+                android:textColor="#4A2C2A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password Field -->
@@ -84,19 +96,22 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Password"
+            app:hintTextColor="#4A2C2A"
+            app:boxBackgroundColor="#FFFFFF"
             app:endIconMode="password_toggle"
+            app:endIconTint="#7D5A50"
             app:boxCornerRadiusTopStart="14dp"
             app:boxCornerRadiusTopEnd="14dp"
             app:boxCornerRadiusBottomStart="14dp"
             app:boxCornerRadiusBottomEnd="14dp"
-            app:boxStrokeColor="#6B4E71">
+            app:boxStrokeColor="#4A2C2A">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:textColor="#2B2D42" />
+                android:textColor="#4A2C2A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Confirm Password Field -->
@@ -106,19 +121,22 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:hint="Confirm Password"
+            app:hintTextColor="#4A2C2A"
+            app:boxBackgroundColor="#FFFFFF"
             app:endIconMode="password_toggle"
+            app:endIconTint="#7D5A50"
             app:boxCornerRadiusTopStart="14dp"
             app:boxCornerRadiusTopEnd="14dp"
             app:boxCornerRadiusBottomStart="14dp"
             app:boxCornerRadiusBottomEnd="14dp"
-            app:boxStrokeColor="#6B4E71">
+            app:boxStrokeColor="#4A2C2A">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:textColor="#2B2D42" />
+                android:textColor="#4A2C2A" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Sign Up Button -->
@@ -130,7 +148,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            app:backgroundTint="#6B4E71"
+            app:backgroundTint="#4A2C2A"
             app:cornerRadius="14dp"
             android:elevation="4dp" />
 
@@ -140,10 +158,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account? Sign In"
-            android:textColor="#6B4E71"
+            android:textColor="#D9822B"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:padding="8dp" />
 
     </LinearLayout>
