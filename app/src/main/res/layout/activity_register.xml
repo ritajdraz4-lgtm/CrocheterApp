@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create an account to start tracking your yarn & patterns"
+            android:text="Create an account to start tracking your yarn and patterns"
             android:textSize="14sp"
             android:textColor="#7D5A50"
             android:gravity="center"
