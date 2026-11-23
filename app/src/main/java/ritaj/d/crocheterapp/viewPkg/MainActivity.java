@@ -2,8 +2,11 @@ package ritaj.d.crocheterapp.viewPkg;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,4 +62,33 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-}
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    //معالجة حدث اختيار عنصر من القائمة
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        if (item.getItemId() == R.id.itmSettings) {
+            Toast.makeText(this, " Settings", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, Settings.class);
+            startActivity(i);
+        }
+
+        if(item.getItemId()==R.id.itmSignOut) {
+
+                Toast.makeText(this, "Sign out", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MainActivity.this, SignOut.class);
+            startActivity(i);
+            }
+
+            if (item.getItemId() == R.id.itmHistory) {
+                Toast.makeText(this, "History", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this, History.class);
+                startActivity(i);
+            }
+            return true;
+
+
+        }}
