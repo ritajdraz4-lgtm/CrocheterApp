@@ -1,5 +1,6 @@
 package ritaj.d.crocheterapp.viewPkg;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -91,4 +93,48 @@ public class MainActivity extends AppCompatActivity {
             return true;
 
 
-        }}
+           }
+    public void showYesNoDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Log out");
+        builder.setMessage("Are you sure?");
+
+        builder.setPositiveButton("Yes", (dialog, which) -> {
+            // تسجيل الخروج
+            finish();
+        });
+
+        builder.setNegativeButton("No", (dialog, which) -> {
+            // إغلاق مربع الحوار فقط
+            dialog.dismiss();
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Log out");
+        builder.setMessage("Are you sure?");
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Toast.makeText(MainActivity.this,
+                        "Signing out",
+                        Toast.LENGTH_SHORT).show();
+
+                finish();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    }
