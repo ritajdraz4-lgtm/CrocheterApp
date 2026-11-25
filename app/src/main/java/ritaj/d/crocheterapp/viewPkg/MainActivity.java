@@ -137,4 +137,36 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Log out");
+        builder.setMessage("Are you sure?");
+
+        // زر Yes
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Toast.makeText(MainActivity.this,
+                        "Signing out", Toast.LENGTH_SHORT).show();
+
+                finish();
+            }
+        });
+
+        // زر No
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Toast.makeText(MainActivity.this,
+                        "Signing out", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     }
